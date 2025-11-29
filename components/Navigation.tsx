@@ -56,13 +56,13 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 backdrop-blur-xl bg-white/90 dark:bg-[#1A1A1A]/30 border border-neutral-300/50 dark:border-slate-700 rounded-full px-8 py-4 shadow-lg hover:shadow-2xl transition-all duration-300">
-      <ul className="flex gap-8">
+    <nav className="fixed top-4 sm:top-8 left-1/2 -translate-x-1/2 z-50 backdrop-blur-xl bg-white/90 dark:bg-[#1A1A1A]/30 border border-neutral-300/50 dark:border-slate-700 rounded-full px-3 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 shadow-lg hover:shadow-2xl transition-all duration-300 max-w-[95vw]">
+      <ul className="flex gap-1 sm:gap-4 md:gap-8">
         {navItems.map((item, idx) => (
           <li key={item.id} style={{ animationDelay: `${idx * 50}ms` }} className="animate-fade-in">
             <button
               onClick={() => scrollToSection(item.id)}
-              className={`relative px-4 py-2 rounded-full font-medium transition-all duration-300 overflow-hidden group ${
+              className={`relative px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 overflow-hidden group ${
                 activeSection === item.id
                   ? 'text-primary-500 bg-primary-100 dark:bg-slate-800/60 dark:text-purple-300'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100'

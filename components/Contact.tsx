@@ -51,37 +51,37 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-xxxl bg-bg-surface dark:bg-[#000000] relative">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-bg-surface dark:bg-[#000000] relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-500/5 dark:to-purple-500/5 pointer-events-none" />
-      <div className="max-w-[1280px] mx-auto px-8 text-center relative z-10">
-        <h2 className="mb-xl animate-fade-in-up dark:text-white text-4xl md:text-5xl font-bold">Let's Connect</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-lg mb-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
+        <h2 className="mb-6 sm:mb-8 md:mb-12 animate-fade-in-up dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Let's Connect</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4" style={{ animationDelay: '100ms' }}>
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
-        <div className="flex justify-center gap-8 mb-xl flex-wrap">
+        <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12 flex-wrap">
           {contacts.map((contact, idx) => (
             <a
               key={idx}
               href={contact.href}
               target={contact.label !== 'Email' ? '_blank' : undefined}
               rel={contact.label !== 'Email' ? 'noopener noreferrer' : undefined}
-              className="flex flex-col items-center gap-2 group animate-fade-in-up"
+              className="flex flex-col items-center gap-1.5 sm:gap-2 group animate-fade-in-up"
               style={{ animationDelay: `${200 + idx * 100}ms` }}
             >
-              <div className="p-4 bg-neutral-100 dark:bg-[#1A1A1A] rounded-full group-hover:bg-primary-100 dark:group-hover:bg-slate-800/60 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 shadow-md group-hover:shadow-lg border border-neutral-200 dark:border-slate-700">
-                <div className="text-neutral-900 dark:text-neutral-100 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
+              <div className="p-3 sm:p-4 bg-neutral-100 dark:bg-[#1A1A1A] rounded-full group-hover:bg-primary-100 dark:group-hover:bg-slate-800/60 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 shadow-md group-hover:shadow-lg border border-neutral-200 dark:border-slate-700">
+                <div className="text-neutral-900 dark:text-neutral-100 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
                   {contact.icon}
                 </div>
               </div>
-              <span className="text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
+              <span className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
                 {contact.label}
               </span>
             </a>
           ))}
         </div>
 
-        <footer className="pt-xl border-t border-neutral-300 dark:border-neutral-600 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors duration-300">
+        <footer className="pt-6 sm:pt-8 md:pt-12 border-t border-neutral-300 dark:border-neutral-600 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors duration-300">
             © 2025 Saikat Mandal. Built with Next.js & Tailwind CSS.
           </p>
         </footer>
