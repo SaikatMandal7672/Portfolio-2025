@@ -25,7 +25,7 @@ const projects = [
     subtitle: "Multi-tenant Blogging Platform",
     desc: "Multi-tenant blogs with Clerk auth, orgs, subdomains, RBAC, and isolated workspaces.",
     github:"https://github.com/SaikatMandal7672/Blogs-Application",
-    live:"https://github.com/SaikatMandal7672/Blogs-Application",
+    live:"https://blogs-dev-application.vercel.app/",
     tags: ["TypeScript", "Next.js", "PostgreSQL", "Prisma"],
   },
   {
