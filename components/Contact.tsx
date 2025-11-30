@@ -69,7 +69,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-bg-surface dark:bg-[#010a06] relative">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-[#e5f8ec] dark:bg-[#010a06] relative">
       {/* Toast Notification */}
       <div
         className={`fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium shadow-lg transition-all duration-300 flex items-center gap-2 ${
