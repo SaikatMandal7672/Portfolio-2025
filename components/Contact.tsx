@@ -69,7 +69,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-[#e5f8ec] dark:bg-[#010a06] relative">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 relative [background-image:radial-gradient(ellipse_at_center_bottom,_#c8f5d6_0%,_#e5f8ec_40%,_#f0fbf4_80%)] dark:[background-image:radial-gradient(ellipse_at_center_bottom,_#052e15_0%,_#010a06_50%,_#000000_90%)]">
       {/* Toast Notification */}
       <div
         className={`fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium shadow-lg transition-all duration-300 flex items-center gap-2 ${
@@ -81,8 +81,6 @@ export default function Contact() {
         </svg>
         Email copied to clipboard!
       </div>
-
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-500/5 dark:to-purple-500/5 pointer-events-none" />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
         <h2 className="mb-6 sm:mb-8 md:mb-12 animate-fade-in-up dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Let's Connect</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4" style={{ animationDelay: '100ms' }}>
