@@ -49,7 +49,7 @@ export default function Education() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative ml-3 sm:ml-6 border-l-2 border-white/20"
+          className="relative ml-3 sm:ml-6 border-l-2 dark:border-white/20 border-neutral-300"
         >
           {education.map((item, index) => (
             <motion.div
@@ -61,7 +61,7 @@ export default function Education() {
               <div className="absolute -left-2 sm:-left-3 top-0 w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 shadow-[0_0_20px_rgba(120,90,255,0.7)] border-2 border-white z-10" />
 
               {/* Content Card */}
-              <div className="ml-6 sm:ml-8 md:ml-10 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl bg-neutral-200 dark:bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+              <div className="ml-6 sm:ml-8 md:ml-10 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl bg-neutral-100 dark:bg-white/5 border border-black/10 dark:border-white/10  backdrop-blur-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-2">
                   <h3 className="text-sm sm:text-base md:text-lg font-semibold text-neutral-900 dark:text-neutral-100 sm:w-[75%]">
                     {item.degree}

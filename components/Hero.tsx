@@ -100,6 +100,9 @@ export default function Hero() {
             <a href="https://www.linkedin.com/in/saikatmandal29/" target="_blank" className="hover:text-neutral-500">LinkedIn</a>
             <a href="https://www.github.com/SaikatMandal7672" target="_blank" className="hover:text-neutral-500">GitHub</a>
           </motion.div>
+
+          {/* Bottom Fade Mask */}
+          <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 md:h-40 bg-gradient-to-t from-zinc-200 dark:from-black to-transparent pointer-events-none z-10" />
         </section>
 
 

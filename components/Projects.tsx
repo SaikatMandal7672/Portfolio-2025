@@ -59,7 +59,7 @@ export default function Projects() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16">Projects</h2>
 
-        {/* Perfect Editorial Grid */}
+        
         <motion.div
           variants={staggerParent}
           initial="hidden"
@@ -73,7 +73,7 @@ export default function Projects() {
               variants={staggerItem}
               whileHover={{ scale: 1.01 }}
               transition={{ type: "spring", stiffness: 140, damping: 12 }}
-              className="border border-black/10 dark:border-white/20 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 bg-white dark:bg-zinc-950 shadow-sm hover:shadow-lg transition-all duration-300 group"
+              className="border border-black/10 dark:border-white/20 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 bg-neutral-50 dark:bg-zinc-950 shadow-sm hover:shadow-lg transition-all duration-300 group"
             >
               {/* Title Row */}
               <div className="flex items-start justify-between gap-3">

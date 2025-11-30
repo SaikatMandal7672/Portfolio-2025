@@ -40,8 +40,8 @@ const child = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full py-12 sm:py-16 md:py-24">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
+    <section id="skills" className="w-full py-12 sm:py-16 md:py-24 bg-slate-100">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 ">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">Skills</h2>
 
         <motion.div
@@ -57,7 +57,7 @@ export default function Skills() {
               variants={child}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 140, damping: 14 }}
-              className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-zinc-200 dark:bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg transition-all"
+              className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-neutral-100 dark:bg-white/5 border border-black/20 backdrop-blur-xl shadow-lg transition-all"
             >
               {/* Title + Accent Bar */}
               <div className="mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
@@ -75,7 +75,7 @@ export default function Skills() {
                 {skill.items.map((item, i) => (
                   <span
                     key={i}
-                    className="px-2.5 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm rounded-md sm:rounded-lg bg-neutral-100 dark:bg-white/10 border border-white dark:border-white/10 text-neutral-700 dark:text-neutral-100 shadow-sm"
+                    className="px-2.5 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm rounded-md sm:rounded-lg bg-neutral-200 dark:bg-white/10 border border-black/10 dark:border-white/10 text-neutral-700 dark:text-neutral-100 shadow-sm"
                   >
                     {item}
                   </span>
