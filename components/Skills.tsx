@@ -40,7 +40,7 @@ const child = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full py-12 sm:py-16 md:py-24 bg-slate-100">
+    <section id="skills" className="w-full py-12 sm:py-16 md:py-24 bg-slate-100 dark:bg-[#030207]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 ">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">Skills</h2>
 

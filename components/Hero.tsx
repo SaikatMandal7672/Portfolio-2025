@@ -102,7 +102,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Bottom Fade Mask */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 md:h-40 bg-gradient-to-t from-zinc-200 dark:from-black to-transparent pointer-events-none z-10" />
+          <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 md:h-40 bg-gradient-to-t from-bg-surface dark:from-[#04030b] to-transparent pointer-events-none z-10" />
         </section>
 
 

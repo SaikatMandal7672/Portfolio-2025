@@ -55,7 +55,7 @@ const staggerItem = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12 sm:py-16 md:py-24 relative bg-bg-surface dark:bg-[#04030b]">
+    <section id="projects" className="py-12 sm:py-16 md:py-24 relative bg-bg-surface dark:bg-[#05040C]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16">Projects</h2>
 
