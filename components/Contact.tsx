@@ -1,4 +1,22 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Contact() {
+  const [showToast, setShowToast] = useState(false)
+
+  const email = 'saikatmandal290103@gmail.com'
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email)
+      setShowToast(true)
+      setTimeout(() => setShowToast(false), 2500)
+    } catch (err) {
+      console.error('Failed to copy email:', err)
+    }
+  }
+
   const contacts = [
     {
       href: 'https://github.com/SaikatMandal7672',
@@ -29,8 +47,8 @@ export default function Contact() {
       ),
     },
     {
-      href: 'mailto:saikat.mandal@example.com',
       label: 'Email',
+      isEmail: true,
       icon: (
         <svg
           className="w-8 h-8"
@@ -52,6 +70,18 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-12 sm:py-16 md:py-24 bg-bg-surface dark:bg-[#000000] relative">
+      {/* Toast Notification */}
+      <div
+        className={`fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium shadow-lg transition-all duration-300 flex items-center gap-2 ${
+          showToast ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+      >
+        <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        </svg>
+        Email copied to clipboard!
+      </div>
+
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-500/5 dark:to-purple-500/5 pointer-events-none" />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
         <h2 className="mb-6 sm:mb-8 md:mb-12 animate-fade-in-up dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Let's Connect</h2>
@@ -60,23 +90,41 @@ export default function Contact() {
         </p>
         <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12 flex-wrap">
           {contacts.map((contact, idx) => (
-            <a
-              key={idx}
-              href={contact.href}
-              target={contact.label !== 'Email' ? '_blank' : undefined}
-              rel={contact.label !== 'Email' ? 'noopener noreferrer' : undefined}
-              className="flex flex-col items-center gap-1.5 sm:gap-2 group animate-fade-in-up"
-              style={{ animationDelay: `${200 + idx * 100}ms` }}
-            >
-              <div className="p-3 sm:p-4 bg-neutral-100 dark:bg-[#1A1A1A] rounded-full group-hover:bg-primary-100 dark:group-hover:bg-slate-800/60 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 shadow-md group-hover:shadow-lg border border-neutral-200 dark:border-slate-700">
-                <div className="text-neutral-900 dark:text-neutral-100 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
-                  {contact.icon}
+            contact.isEmail ? (
+              <button
+                key={idx}
+                onClick={copyEmail}
+                className="flex flex-col items-center gap-1.5 sm:gap-2 group animate-fade-in-up cursor-pointer"
+                style={{ animationDelay: `${200 + idx * 100}ms` }}
+              >
+                <div className="p-3 sm:p-4 bg-neutral-100 dark:bg-[#1A1A1A] rounded-full group-hover:bg-primary-100 dark:group-hover:bg-slate-800/60 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 shadow-md group-hover:shadow-lg border border-neutral-200 dark:border-slate-700">
+                  <div className="text-neutral-900 dark:text-neutral-100 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
+                    {contact.icon}
+                  </div>
                 </div>
-              </div>
-              <span className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
-                {contact.label}
-              </span>
-            </a>
+                <span className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
+                  {contact.label}
+                </span>
+              </button>
+            ) : (
+              <a
+                key={idx}
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 sm:gap-2 group animate-fade-in-up"
+                style={{ animationDelay: `${200 + idx * 100}ms` }}
+              >
+                <div className="p-3 sm:p-4 bg-neutral-100 dark:bg-[#1A1A1A] rounded-full group-hover:bg-primary-100 dark:group-hover:bg-slate-800/60 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 shadow-md group-hover:shadow-lg border border-neutral-200 dark:border-slate-700">
+                  <div className="text-neutral-900 dark:text-neutral-100 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
+                    {contact.icon}
+                  </div>
+                </div>
+                <span className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-primary-500 dark:group-hover:text-purple-400 transition-colors duration-300">
+                  {contact.label}
+                </span>
+              </a>
+            )
           ))}
         </div>
 
